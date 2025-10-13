@@ -1,9 +1,11 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
 const PORT = 4000;
 
 app.use(express.static("public"));
+app.use(cors())
 
 const apps = [
   { name: "Auth Service", url: "https://auth-service-2-nik4.onrender.com" },
