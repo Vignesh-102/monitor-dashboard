@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monitor Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; padding: 20px; }
+    h2 { color: #333; }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h2>🧭Monitor Dashboard</h2>
+  <div id="apps">Loading...</div>
+
+  <script>
+    async function fetchStatus() {
+      const res = await fetch("/status");
+      const data = await res.json();
+
+      const container = document.getElementById("apps");
+      container.innerHTML = "";
+
+      data.forEach(app => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerHTML = `
+          <strong>${app.name}</strong><br>
+          URL: <a href="${app.url}" target="_blank">${app.url}</a><br>
+          Status: ${app.status}<br>
+          Latency: ${app.latency ? (app.latency / 1000).toFixed(2) + ' s'  : 'N/A'}
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    fetchStatus();
+    setInterval(fetchStatus, 600000);
+  </script>
+</body>
+</html>
