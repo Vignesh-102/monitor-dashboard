@@ -10,7 +10,7 @@ app.use(cors())
 
 const apps = [
   { name: "Auth Service", url: "https://auth-service-2-nik4.onrender.com" },
-  { name: "Ecommerce API", url: "https://ecommerce-backend-1s9y.onrender.com" },
+  //{ name: "Ecommerce API", url: "https://ecommerce-backend-1s9y.onrender.com" },
 ];
 
 app.get("/status", async (req, res) => {
