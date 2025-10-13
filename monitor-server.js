@@ -17,6 +17,7 @@ app.get("/status", async (req, res) => {
       try {
         const response = await fetch(appData.url, { method: "GET" });
         const latency = Date.now() - start;
+        console.log(response, 'the response')
         return {
           ...appData,
           status: response.ok ? "🟢 Up" : "🔴 Down",
