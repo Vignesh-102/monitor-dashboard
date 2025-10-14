@@ -9,7 +9,9 @@ app.use(express.static("public"));
 app.use(cors())
 
 const apps = [
-  { name: "Auth Service", url: "https://auth-service-2-nik4.onrender.com" },
+  { name: "Auth Service", url: "https://auth-service-2-nik4.onrender.com/actuator/health
+    
+    " },
   //{ name: "Ecommerce API", url: "https://ecommerce-backend-1s9y.onrender.com" },
 ];
 
