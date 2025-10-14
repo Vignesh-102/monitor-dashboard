@@ -13,6 +13,14 @@ const apps = [
   //{ name: "Ecommerce API", url: "https://ecommerce-backend-1s9y.onrender.com" },
 ];
 
+app.get("/health", (req, res) => {
+  res.json({
+    status: "UP",
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime().toFixed(2) + "s",
+  });
+});
+
 app.get("/status", async (req, res) => {
   const results = await Promise.all(
     apps.map(async (appData) => {
