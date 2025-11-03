@@ -33,7 +33,9 @@
           <strong>${app.name}</strong><br>
           URL: <a href="${app.url}" target="_blank">${app.url}</a><br>
           Status: ${app.status}<br>
-          Latency: ${app.latency ? (app.latency / 1000).toFixed(2) + ' s'  : 'N/A'}
+          Latency: ${app.latency ? (app.latency / 1000).toFixed(2) + ' s'  : 'N/A'}<br>
+          Application Type: ${app.appType}<br>
+          Hosted In: ${app.hostedIn}
         `;
         container.appendChild(div);
       });
