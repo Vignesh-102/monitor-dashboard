@@ -12,4 +12,4 @@ jobs:
       - name: Ping monitor App
         run: |
           echo "Pinging Render monitor App at $(date)"
-          curl -s -o /dev/null -w "%{http_code}" https://monitor-dashboard-3vwn.onrender.com/health
+          curl -s -o /dev/null -w "%{http_code}" https://monitor-dashboard-3vwn.onrender.com
