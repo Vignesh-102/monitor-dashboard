@@ -27,7 +27,7 @@ app.get("/status", async (req, res) => {
     apps.map(async (appData) => {
       const start = Date.now();
       try {
-        const response = await fetch(appData.url, { method: "HEAD" });
+        const response = await fetch(appData.url, { method: "GET" });
         const latency = Date.now() - start;
         console.log(response, 'the response');
         return {
