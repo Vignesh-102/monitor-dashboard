@@ -9,8 +9,9 @@ app.use(express.static("public"));
 app.use(cors())
 
 const apps = [
-  { name: "Auth Service", url: "https://auth-service-2-nik4.onrender.com/actuator/health", appType: 'backend', hostedIn: "render" },
-  { name: "Form Builder App", url: "https://vignesh-102.github.io/form-builder-app/formBuilder", appType: "frontend", hostedIn: "gitHub"}
+  { name: "Ride-Hailing:Auth-Service", url: "https://auth-service-2-nik4.onrender.com/actuator/health", appType: 'backend', hostedIn: "render" },
+  { name: "Ride:Hailing:User-Servie", url: "https://user-service-ovqy.onrender.com/actuator/health", appType: "backend", hostedIn: "render"},
+  { name: "Form Builder App", url: "https://vignesh-102.github.io/form-builder-app/formBuilder", appType: "frontend", hostedIn: "gitHub"},
   //{ name: "Ecommerce API", url: "https://ecommerce-backend-1s9y.onrender.com" },
 ];
 
