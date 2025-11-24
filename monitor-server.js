@@ -12,6 +12,8 @@ const apps = [
   { name: "Ride-Hailing:Auth-Service", url: "https://auth-service-2-nik4.onrender.com/actuator/health", appType: 'backend', hostedIn: "render" },
   { name: "Ride:Hailing:User-Servie", url: "https://user-service-ovqy.onrender.com/actuator/health", appType: "backend", hostedIn: "render"},
   { name: "Ride:Hailing:Trip-Servie", url: "https://trip-service-8cta.onrender.com/actuator/health", appType: "backend", hostedIn: "render"},
+  { name: "Ride:Hailing:service-registry", url: "https://service-registry-2cns.onrender.com/actuator/health", appType: "backend", hostedIn: "render"},
+  { name: "Ride:Hailing:api-gateway", url: "https://api-gateway-o3xn.onrender.com/actuator/health", appType: "backend", hostedIn: "render"},
   { name: "Ride:Hailing:Notification-Servie", url: "https://notification-service-u7uk.onrender.com/actuator/health", appType: "backend", hostedIn: "render"},
   
   { name: "Form Builder App", url: "https://vignesh-102.github.io/form-builder-app/formBuilder", appType: "frontend", hostedIn: "gitHub"},
