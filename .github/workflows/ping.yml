@@ -2,7 +2,7 @@ name: Keep Render Monitor dashboard App Warm
 
 on:
   schedule:
-    - cron: "*/5 3-15 * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
